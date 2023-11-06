@@ -62,17 +62,17 @@ Projeto de cadastro de pessoal, com Springboot e Angular
   - modelo:
   - repositorio:
 
-* Banco de Dados fullstack
+* Banco de Dados fullstack (Extensão usada no VSCode, para usar o Mysql: https://marketplace.visualstudio.com/...)
   - Configuração do arquivo application.properties:
-      ### Altera a estrutura da tabela caso a entidade tenha mudanças.
+      #### Altera a estrutura da tabela caso a entidade tenha mudanças.
       spring.jpa.hibernate.ddl-auto=update
       
-      ### Acesso ao banco de dados
+      #### Acesso ao banco de dados
       spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/nome_base_de_dados
       
-      ### Usuário do banco de dados
+      #### Usuário do banco de dados
       spring.datasource.username=usuário
       
-      ### Senha do banco de dados
+      #### Senha do banco de dados
       spring.datasource.password=senha
     
