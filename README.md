@@ -59,10 +59,10 @@ Projeto de cadastro de pessoal, com Springboot e Angular
 
 * Pastas
   - controle:
-  - modelo:
+  - modelo: cliente.java (criar a tabela do banco de dados; Trafega informações atraves da API)
   - repositorio:
 
-* Banco de Dados fullstack (Extensão usada no VSCode, para usar o Mysql: https://marketplace.visualstudio.com/...)
+* Banco de Dados 
   - Configuração do arquivo application.properties:
       #### Altera a estrutura da tabela caso a entidade tenha mudanças.
       spring.jpa.hibernate.ddl-auto=update
