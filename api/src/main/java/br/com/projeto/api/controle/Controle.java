@@ -1,7 +1,11 @@
 package br.com.projeto.api.controle;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,13 +35,39 @@ public class Controle {
     public Cliente cadastrar(@RequestBody Cliente c){
         return acao.save(c);
     }
+
+
+    /*
+     Listar os registros adicionados
+     (GET) localhost:8080  - Thunder client
+     */
+    @GetMapping("/")
+    public Iterable<Cliente> selecionar(){
+        return acao.findAll();
+    }
+
+
+    /*
+     Alterar os registros já salvos
+     (PUT) localhost:8080 -Thunder Client
+     */
+    @PutMapping("/")
+    public Cliente editar(@RequestBody Cliente c){
+        return acao.save(c);
+    }
+ 
+
+    /*
+     Deletar os registros já salvos, pelo seu 'id'
+     (DEL) localhost:8080/4  -Thunder Client
+    */
+    @DeleteMapping("/{codigo}")
+    public void remover(@PathVariable long codigo){
+        acao.deleteById(codigo);
+    }
  
  
- 
- 
- 
- 
- 
+  
     // Método de retorno para testar 
     /*@GetMapping("/")
     public String teste(){
