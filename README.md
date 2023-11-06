@@ -22,7 +22,11 @@ Projeto de cadastro de pessoal, com Springboot e Angular
 
 * Spring Boot Extension Pack: https://marketplace.visualstudio.com/...
 
+* Lombok Annotations Support for VS Code 
+
 * MySQL: https://marketplace.visualstudio.com/...
+
+* Thunger Client
 
 
 ## Especifícações do projeto Back-end
@@ -58,7 +62,7 @@ Projeto de cadastro de pessoal, com Springboot e Angular
   - Lombok
 
 * Pastas
-  - controle:
+  - controle: Controle (ficaram as rotas)
   - modelo: Cliente.java (criar a tabela do banco de dados; Trafega informações atraves da API)
   - repositorio: Repositorio(ações SQL: Alterar, Atualizar, Acrescentar...)
 
