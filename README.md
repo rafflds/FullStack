@@ -62,7 +62,7 @@ Projeto de cadastro de pessoal, com Springboot e Angular
   - Lombok
 
 * Pastas
-  - controle:
+  - controle: Controle (ficaram as rotas)
   - modelo: Cliente.java (criar a tabela do banco de dados; Trafega informações atraves da API)
   - repositorio: Repositorio(ações SQL: Alterar, Atualizar, Acrescentar...)
 
