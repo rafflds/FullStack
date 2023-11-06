@@ -59,8 +59,8 @@ Projeto de cadastro de pessoal, com Springboot e Angular
 
 * Pastas
   - controle:
-  - modelo: cliente.java (criar a tabela do banco de dados; Trafega informações atraves da API)
-  - repositorio:
+  - modelo: Cliente.java (criar a tabela do banco de dados; Trafega informações atraves da API)
+  - repositorio: Repositorio(ações SQL: Alterar, Atualizar, Acrescentar...)
 
 * Banco de Dados 
   - Configuração do arquivo application.properties:
