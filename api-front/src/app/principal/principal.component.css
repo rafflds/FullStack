@@ -1,0 +1,19 @@
+img{
+    /*largura da imagem*/
+    width: 250px;
+}
+
+form{
+    width: 500px;
+    /*distância de todas as margens, alinhar no centro*/
+    margin: 30px auto;
+    text-align: center; 
+}
+
+input{ /*Distância do input abaixo*/
+    margin-bottom: 10px;
+}
+
+input[type="button"]{  /*Distânciar os botões pelo lado direito*/
+    margin-right: 10px;
+}
