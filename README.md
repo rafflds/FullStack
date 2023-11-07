@@ -43,7 +43,7 @@ Projeto de cadastro de pessoal, com Springboot e Angular
       - MySQL Driver
       - Lombok
 
-## Criar o projeto spring no VSCode
+## Criar o projeto Spring no VSCode
 * View:
   - Command Palette
   - spring initializr: Create a Maven Project
@@ -79,4 +79,20 @@ Projeto de cadastro de pessoal, com Springboot e Angular
       
       #### Senha do banco de dados
       spring.datasource.password=senha
-    
+
+# Front-end
+
+## Softwares utilizados:
+* Visual Studio Code: https://code.visualstudio.com/
+* Angular: https://angular.io
+
+## Criar o projeto Angular no VSCode
+* Terminal:
+   - npm install -g @angular/cli  (instalar o angular)
+   - npm v  (visulizar a versão instalada) = 16.2.9 - Angular | 18.16.0 - Node | 9.5.1 - NPM
+   - ng new api-front (vai criar o projeto, com nome api-front)
+
+* Dependencias do Angular  
+   - Would you like to add Angular routing? (y/N) N
+   - Which stylesheet format would you like to use? CSS
+  
