@@ -85,12 +85,14 @@ Projeto de cadastro de pessoal, com Springboot e Angular
 ## Softwares utilizados:
 * Visual Studio Code: https://code.visualstudio.com/
 * Angular: https://angular.io
+* Bootstrap: https://getbootstrap.com
 
 ## Criar o projeto Angular no VSCode
 * Terminal:
    - npm install -g @angular/cli  (instalar o angular)
    - npm v  (visulizar a versão instalada) = 16.2.9 - Angular | 18.16.0 - Node | 9.5.1 - NPM
    - ng new api-front (vai criar o projeto, com nome api-front)
+   - ng g c principal (criar componente)
 
 * Dependencias do Angular  
    - Would you like to add Angular routing? (y/N) N
