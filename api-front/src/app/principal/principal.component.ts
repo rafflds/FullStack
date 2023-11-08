@@ -16,6 +16,9 @@ export class PrincipalComponent {
   // Variável para visibilidade dos botões
   btnCadastro:boolean = true;
 
+  // Variável para visibilidade da tabela
+  tabela:boolean = true;
+
 
   // Json de clientes
   clientes:Cliente[] = [];
@@ -36,7 +39,23 @@ export class PrincipalComponent {
   cadastrar():void{
     // Acessando o método do cliente.service.ts (seleção de * clientes)
     this.servico.cadastrar(this.cliente)
-    .subscribe(retorno => {this.clientes.push(retorno); });  // retorno = lista de clientes
+    .subscribe(retorno => {
+
+      // Cadastrar o cliente no vetor
+      this.clientes.push(retorno);     // retorno = lista de clientes
+
+      // Limpar formulário
+      this.cliente = new Cliente();
+
+      // Mensagem
+      alert('Cliente cadastrado com sucesso!')
+    });  
+  }
+
+
+  // Método para selecionar um cliente específico
+  selecionarCliente(){
+    
   }
 
 
