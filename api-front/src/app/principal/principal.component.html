@@ -4,9 +4,9 @@
     <img src="assets/perfil.png" alt="foto de perfil">
 
     <!--Campos para preencher-->
-    <input type="text" placeholder="Nome" class="form-control">
-    <input type="text" placeholder="Idade" class="form-control">
-    <input type="text" placeholder="Cidade" class="form-control">
+    <input type="text" placeholder="Nome" class="form-control" name="nome"  [(ngModel)]="cliente.nome">
+    <input type="text" placeholder="Idade" class="form-control" name="idade"   [(ngModel)]="cliente.idade">
+    <input type="text" placeholder="Cidade" class="form-control" name="cidade"   [(ngModel)]="cliente.cidade">
 
     <!--Botões de cores diferentes
     *ngIf="btnCadastro"  visualizar o botão na página, caso ele esteja true.
@@ -18,6 +18,8 @@
     <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
     <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
 </form>
+
+<h1>{{cliente}}</h1>
 
 
 <!--Criar uma tabela-->
@@ -32,6 +34,15 @@
         </tr>
     </thead>
 
-    <tbody></tbody>
+    <!--Visualizar os registros criados no Back-end, na página HTML-->
+    <tbody>   <!--c = objeto de linhas-->
+        <tr *ngFor="let c of clientes">  <!--td*5  (esquema de criação)-->
+            <td></td>
+            <td>{{c.nome}}</td>
+            <td>{{c.idade}}</td>
+            <td>{{c.cidade}}</td>
+            <td><button class="btn btn-success">Selecionar</button></td>
+        </tr>
+    </tbody>
 
 </table>
