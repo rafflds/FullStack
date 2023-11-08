@@ -10,8 +10,10 @@
 
     <!--Botões de cores diferentes
     *ngIf="btnCadastro"  visualizar o botão na página, caso ele esteja true.
-     No principal.component.ts   -->
-    <input type="button" value="Cadastrar" *ngIf="btnCadastro"  class="btn btn-primary">
+     No principal.component.ts  
+     (click)="cadastrar()  quando clicar no botão cadastrar, irá adicionar um novo registro
+     class="btn btn-primary"   cor do botão-->
+    <input type="button" value="Cadastrar" *ngIf="btnCadastro"  class="btn btn-primary" (click)="cadastrar()">
     
     <!--*ngIf="!btnCadastro"   sumindo os botões da página-->
     <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
@@ -19,7 +21,6 @@
     <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
 </form>
 
-<h1>{{cliente}}</h1>
 
 
 <!--Criar uma tabela-->
