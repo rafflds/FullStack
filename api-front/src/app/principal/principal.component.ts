@@ -53,10 +53,44 @@ export class PrincipalComponent {
   }
 
 
-  // Método para selecionar um cliente específico
-  selecionarCliente(){
-    
+  // Quando selecionar um cliente específico
+  selecionarCliente(posicao:number):void{
+
+    // seleciona o cliente
+    this.cliente = this.clientes[posicao];
+
+    // Os botões ficarão invisiveis
+    this.btnCadastro = false;
+    this.tabela = false;
+
   }
+
+
+  // Método de editar
+  editar():void{
+    this.servico.editar(this.cliente)
+    .subscribe(retorno => {
+
+      // Obter posição do cliente
+      let posicao = this.clientes.findIndex(obj=> {
+        return obj.codigo = retorno.codigo;
+      });
+
+      // Alterar os dados do cliente
+      this.clientes[posicao] = retorno;
+
+      // Limpar formulário
+      this.cliente = new Cliente();
+
+      // Visibilidade
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      // Mensagem
+      alert('Cliente alterado com sucesso!')
+    })
+  }
+  
 
 
   // Método de inicialização (Nativo do Angular)

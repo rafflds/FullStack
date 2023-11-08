@@ -31,4 +31,12 @@ export class ClienteService {
   cadastrar(obj:Cliente):Observable<Cliente>{
     return this.http.post<Cliente>(this.url, obj);
   }
+
+
+  /*Editar registro salvo na tabela
+  - Botão editar aparece após selecionar o cliente
+  */ 
+  editar(obj:Cliente):Observable<Cliente>{
+    return this.http.put<Cliente>(this.url, obj);
+  }
 }

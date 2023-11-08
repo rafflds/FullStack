@@ -16,7 +16,7 @@
     <input type="button" value="Cadastrar" *ngIf="btnCadastro"  class="btn btn-primary" (click)="cadastrar()">
     
     <!--*ngIf="!btnCadastro"   sumindo os botões da página-->
-    <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
+    <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning" (click)="editar()">
     <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
     <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
 </form>
@@ -37,12 +37,12 @@
 
     <!--Visualizar os registros criados no Back-end, na página HTML-->
     <tbody>   <!--c = objeto de linhas-->
-        <tr *ngFor="let c of clientes">  <!--td*5  (esquema de criação)-->
+        <tr *ngFor="let c of clientes; index as i">  <!--td*5  (esquema de criação)-->
             <td></td>
             <td>{{c.nome}}</td>
             <td>{{c.idade}}</td>
             <td>{{c.cidade}}</td>
-            <td><button class="btn btn-success">Selecionar</button></td>
+            <td><button class="btn btn-success" (click)="selecionarCliente(i)">Selecionar</button></td>
         </tr>
     </tbody>
 
