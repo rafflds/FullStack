@@ -93,6 +93,45 @@ export class PrincipalComponent {
   
 
 
+  // Método de remover clientes
+  remover():void{
+    this.servico.remover(this.cliente.codigo)
+    .subscribe(retorno => {
+
+      // Obter posição do cliente
+      let posicao = this.clientes.findIndex(obj=> {
+        return obj.codigo = this.cliente.codigo;
+      });
+
+      // Remover cliente 
+      this.clientes.splice(posicao, 1);
+
+      // Limpar formulário
+      this.cliente = new Cliente();
+
+      // Visibilidade
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      // Mensagem
+      alert('Cliente removido com sucesso!')
+    })
+  }
+
+
+  // Método para cancelar
+  cancelar():void{
+    
+     // Limpar formulário
+     this.cliente = new Cliente();
+
+     // Visibilidade
+     this.btnCadastro = true;
+     this.tabela = true;
+
+  }
+
+
   // Método de inicialização (Nativo do Angular)
   ngOnInit(){
     this.selecionar();
