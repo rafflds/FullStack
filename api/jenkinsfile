@@ -1,0 +1,14 @@
+pipeline {
+    agent any  // qualquer um
+
+    // estágios 
+    stages {
+        stage('Inicial') {
+            // espaço de execução
+            steps {
+                echo 'Iniciando a pipeline'
+            }
+        }
+    }
+     
+}
