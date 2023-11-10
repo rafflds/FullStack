@@ -15,6 +15,8 @@ Projeto de cadastro de pessoal, com Springboot e Angular
 
 * Google Chrome: https://www.google.com.br/chrome/inde...
 
+* Docker com Jenkins
+
 
 ## Extensões do Visual Studio Code:
 
